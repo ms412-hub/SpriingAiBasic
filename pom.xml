@@ -60,7 +60,6 @@
             <groupId>net.sourceforge.tess4j</groupId>
             <artifactId>tess4j</artifactId>
             <version>5.2.1</version>
-
             <exclusions>
                 <exclusion>
                     <groupId>commons-logging</groupId>
