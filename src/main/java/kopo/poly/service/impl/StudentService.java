@@ -19,13 +19,6 @@ public class StudentService implements IStudentService {
     // 2단계에서 구현한 Mapper 인터페이스 의존성 주입 (오라클 DB 연결용)
     private final IStudentMapper studentMapper;
 
-    /**
-     * 학생 정보를 DB에 등록한 후, 전체 학생 목록을 조회하여 반환하는 메서드
-     *
-     * @param pDTO 등록할 학생 정보를 담고 있는 DTO 객체
-     * @return 전체 학생 목록 (등록 결과 포함)
-     * @throws Exception 예외 처리
-     */
     @Override
     public List<StudentDTO> insertStudent(StudentDTO pDTO) throws Exception {
 
@@ -60,13 +53,7 @@ public class StudentService implements IStudentService {
         // 5. 전체 학생 목록 반환
         return rList;
     }
-    /**
-     * 학생 정보를 수정한 후, 전체 학생 목록을 조회하여 반환하는 메서드
-     *
-     * @param pDTO 수정할 학생 정보를 담고 있는 DTO 객체
-     * @return 수정 후 전체 학생 목록
-     * @throws Exception 예외 처리
-     */
+
     @Override
     public List<StudentDTO> updateStudent(StudentDTO pDTO) throws Exception {
 
@@ -105,12 +92,7 @@ public class StudentService implements IStudentService {
         // 6. 전체 학생 목록 반환
         return rList;
     }
-    /**
-     * 학생 정보를 DB에서 삭제한 후, 전체 학생 목록을 조회하여 반환하는 메서드
-     * * @param pDTO 삭제할 학생 정보를 담고 있는 DTO (주로 userId 사용)
-     * @return 삭제 후 전체 학생 목록
-     * @throws Exception 예외 발생 시 처리
-     */
+
     @Override
     public List<StudentDTO> deleteStudent(StudentDTO pDTO) throws Exception {
 
